@@ -194,6 +194,8 @@ And dea.date = vac.date
 Select *, (RollingPopulationVaccinated/population)* 100 AS PercentPopVac
 from #PercentPopulationVaccinated
 
+--Creating view for visualization later on
+       
 Drop View if exists PercentPopulationVaccinated
 Create View PercentPopulationVaccinated as
 Select dea.continent, dea.location, dea.date, dea.population, vac.new_vaccinations,
